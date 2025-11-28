@@ -19,7 +19,7 @@ export default function Peliculas() {
 
     return (
         <div className="p-10">
-            <h1 className="text-2xl font-bold text-center">Listado de Peliculas !!</h1>
+            <h1 className="text-2xl font-bold text-center">Listado de Peliculas !!!</h1>
             <ul className="flex flex-wrap gap-8 mt-10 items-center justify-center">
                 {
                     peliculas.map(pelicula =>
