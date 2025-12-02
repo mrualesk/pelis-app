@@ -4,6 +4,7 @@ import {createBrowserRouter} from "react-router";
 import {RouterProvider} from "react-router/dom";
 import Peliculas from "./components/Peliculas.jsx";
 import PeliculaDetalle from "./components/PeliculaDetalle.jsx";
+import PeliculasFavoritasProvider from "./providers/PeliculasFavoritasProvider.jsx";
 
 
 const router = createBrowserRouter([
@@ -18,5 +19,7 @@ const router = createBrowserRouter([
 ]);
 
 createRoot(document.getElementById('root')).render(
-    <RouterProvider router={router}/>,
+    <PeliculasFavoritasProvider>
+        <RouterProvider router={router}/>,
+    </PeliculasFavoritasProvider>
 )

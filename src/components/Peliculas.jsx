@@ -1,4 +1,6 @@
 import {useEffect, useState} from "react";
+import CardPelicula from "./CardPelicula.jsx";
+import Title from "./Title.jsx";
 
 export default function Peliculas() {
 
@@ -19,14 +21,11 @@ export default function Peliculas() {
 
     return (
         <div className="p-10">
-            <h1 className="text-2xl font-bold text-center">Listado de Peliculas !!!</h1>
+            <Title title="Listado de Peliculas !!!" />
             <ul className="flex flex-wrap gap-8 mt-10 items-center justify-center">
                 {
                     peliculas.map(pelicula =>
-                        <li className="w-64 hover:scale-105 transition-all" key={pelicula["#ID"]}>
-                            <p className="text-center">{pelicula["#TITLE"]}</p>
-                            <img src={pelicula["#IMG_POSTER"]} alt={pelicula["#TITLE"]}/>
-                        </li>
+                        <CardPelicula key={pelicula["#ID"]} pelicula={pelicula}/>
                     )
                 }
             </ul>
