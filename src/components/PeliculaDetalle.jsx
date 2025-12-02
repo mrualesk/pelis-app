@@ -39,9 +39,10 @@ export default function PeliculaDetalle() {
                 <div className="rounded-2xl bg-gray-200 p-2 hover:scale-105 transition-all w-[300px] relative">
                     <div className="absolute top-5 right-5">
                         {
-                            esFavorita ? <img onClick={removePeliculaFavorita(pelicula.imdbId)} src="/star-on-icon.svg"
-                                              alt="Star" width="30" height="30"/>
-                                : <img onClick={addPeliculaFavorita(pelicula)} src="/star-off-icon.svg" alt="Star"
+                            esFavorita(pelicula.imdbId) ?
+                                <img onClick={() => removePeliculaFavorita(pelicula.imdbId)} src="/star-on-icon.svg"
+                                     alt="Star" width="30" height="30"/>
+                                : <img onClick={() => addPeliculaFavorita(pelicula)} src="/star-off-icon.svg" alt="Star"
                                        width="30" height="30"/>
                         }
                     </div>

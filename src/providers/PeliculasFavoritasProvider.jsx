@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import {PeliculasFavoritasContext} from "./PeliculasFavoritasContext.js";
 
-
 // const peliculaFavoritaExample = {
 //     id: 1,
 //     title: "Spiderman",
@@ -13,6 +12,7 @@ export default function PeliculasFavoritasProvider({children}) {
     const [peliculasFavoritas, setPeliculasFavoritas] = useState([])
 
     const addPeliculaFavorita = (pelicula) => {
+
         const peliculaFavorita = {
             id: pelicula.imdbId,
             title: pelicula.short.name,
